@@ -1,0 +1,228 @@
+html.noscroll{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll !important;
+    z-index: 10;
+ }
+.main{
+    background-color: hsl(36, 100%, 99%);
+    font-family: "Inter", sans-serif;
+    padding: 70px 400px;
+}
+.logo{
+    left: auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+nav a:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+li{
+    display: flex;
+    align-items: center;
+}
+li::marker{
+    content: "";
+}
+.puzzle-pic{
+    max-width: 700px;
+}
+.text-first-article{
+    display: flex;
+}
+h1{
+    max-width: 250px;
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+p{
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+}
+.button-text{
+    max-width: 320px;
+    padding-left: 90px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.positioning-main-section{
+    display:flex;
+    margin-top: 30px;
+
+}
+.new-articles{
+    padding: 0px 30px;
+    background-color: hsl(240, 100%, 2%);
+    margin-left: 35px;
+    max-height: fit-content;
+    padding-bottom: 40px;
+}
+h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 35px;
+}
+h3{
+    color: white;
+    margin-bottom: 0px;
+}
+hr{
+    border-color: hsl(236, 13%, 42%);
+}
+.new-articles p{
+    margin-bottom: 25px;
+}
+.new-articles h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+.read-more{
+    padding: 10px 20px;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 800;
+    background-color: hsl(5, 85%, 63%);
+    border: 0.5px solid hsl(5, 85%, 43%);
+    max-width: 150px;
+}
+.read-more:hover{
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+.top-articles{
+    display: flex;
+    padding-top: 40px;
+}
+.article{
+    display: flex;
+}
+.article-pic{
+    max-height: 120px;
+}
+.article-info{
+    padding-left: 30px;
+    padding-right: 35px;
+}
+.article-info h2{
+    margin: 0px;
+    margin-bottom: 10px;
+    color: hsl(5, 85%, 63%);
+}
+.article-info h3{
+    margin: 0px;
+    color: black;
+    font-size: 15px;
+}
+.article-info p{
+    font-size: 12px;
+}
+.article-info a{
+    color: black;
+}
+.article-info a:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.mobile{
+    display: none;
+}
+.menu{
+    border: none;
+    background-color: white;
+    position: relative;
+}
+.menu-open{
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    z-index: 578;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding: 20px;
+    display:none;
+    transition: transform 0.3s ease;
+}
+.menu-open a{ 
+    padding-top: 30px;
+    color:black;
+}
+.close-menu{
+    border: none;
+    background-color: white;
+    float: right;
+}
+.positioning-menu{
+    padding-top: 90px;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Szare tło z przezroczystością */
+    display: none; /* Domyślnie ukryte */
+    z-index: 22; /* Powinno być wyżej niż inne elementy */
+  }
+/* .menu-open::backdrop{
+    background: black;
+    opacity: 0.5;
+} */
+@media (max-width: 376px){
+    .main{
+        padding: 15px 0px;
+    }
+    .puzzle-pic{
+        content:url(/assets/images/image-web-3-mobile.jpg);
+        max-width: 356px;
+    }
+    .positioning-main-section{
+        flex-direction: column;
+    }
+    .text-first-article{
+        flex-direction: column;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    h1{
+        max-width: 400px;
+    }
+    .button-text{
+        padding: 0px;
+    }
+    .new-articles{
+        margin-top: 35px;
+        margin-left: 0px;
+    }
+    .top-articles{
+        flex-direction: column;
+    }
+    .article-info{
+        margin-bottom: 25px;
+    }
+}
